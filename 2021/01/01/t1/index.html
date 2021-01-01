@@ -20,28 +20,66 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kanna&#39;s Zone">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="转载自https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;145261497 一、引言电子管曾为人类开启了电子时代。跟半导体器件相比，它透明的外壳、肉眼可观的尺寸，为我们普通爱好者探索它的秘密提供了方便。本文以一款型号为KT88的束射四极管为例，记述一些研究结论。 二、电子管功放本人一台电子管功放，用来推动一对德国产老音箱EL80，中低音醇厚绵延，高音得益于EL80天蚕丝振膜的轻巧，甜脆灵动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电子管原理及束射四极管KT88结构研究">
+<meta property="og:url" content="http://example.com/2021/01/01/t1/index.html">
 <meta property="og:site_name" content="Kanna&#39;s Zone">
+<meta property="og:description" content="转载自https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;145261497 一、引言电子管曾为人类开启了电子时代。跟半导体器件相比，它透明的外壳、肉眼可观的尺寸，为我们普通爱好者探索它的秘密提供了方便。本文以一款型号为KT88的束射四极管为例，记述一些研究结论。 二、电子管功放本人一台电子管功放，用来推动一对德国产老音箱EL80，中低音醇厚绵延，高音得益于EL80天蚕丝振膜的轻巧，甜脆灵动">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-2144a11abeb3013dcd7e3bdee923e023_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-1a2d426cef42ddd16e8658c8d8b09a24_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-f7cf57775b098a3396f9e0e1732b362c_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-666a0a9bb36f83af65c054ac128f6d24_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-95d7da3bd20af8b8a4c76493b8cc2fee_720w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-45535aa5f5dd68cdc46ef6b7e23e9f2d_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-9d37c9eba6ba6dafb68d852fa83ef797_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-d05fb50f6c57dbc62ebdf99f699ebb6a_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-c80facc12cbbf2ed4fab304fe13b39e2_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-c26296a22a3a9ec7af100914a52884bb_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-6659f2fd8e6a0b396ae62c803fe2da67_720w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-82edd499dd5de1ab162be53829e90899_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-e2f831e8c6b00dad85f979db790fc74c_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-6981373c08023d08aab0b1b145c5f54c_720w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-5ab8e9ae5e2228f81251ccd3533a96d5_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-59ee1e121a45ddaf15be6460de4c158a_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-cf36a81ec9ca20a8194aee992fcd8a90_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-5251cdf732de1344f0f73cc13e3c588e_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-1abc65562b1f4d70a65b909b938e66be_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-8127b5c1f419b06f72180427724c5c33_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-3e4fbd7936d6be6ddd0fdebc260033e4_720w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-c5bbfc1120ce0b17e2e50bb1fb1017d1_720w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-0f4f42b05b220e085378cf21342ac075_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-ecc7263f0eb1bc31e920a4e8f70dc55a_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-fbfc1c62b0c4a44962b06129bdd3154b_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-b7c447fb02ef05c45c8340c1a9c87a3c_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-97fe549c491286151e59ba114a925018_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-38d63d698e8855555d157098bcf4530c_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-ced934763e8cfae5d1f050321f64e5c3_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-4571203675af6b63a7e7d0a97e40e154_720w.jpg">
+<meta property="article:published_time" content="2021-01-01T08:40:44.000Z">
+<meta property="article:modified_time" content="2021-01-01T09:42:01.665Z">
 <meta property="article:author" content="Kanna">
+<meta property="article:tag" content="晶体管">
+<meta property="article:tag" content="半导体">
+<meta property="article:tag" content="电子管">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-2144a11abeb3013dcd7e3bdee923e023_720w.jpg">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/01/01/t1/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Kanna's Zone</title>
+  <title>电子管原理及束射四极管KT88结构研究 | Kanna's Zone</title>
   
 
 
@@ -149,9 +187,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -167,10 +206,9 @@
       <meta itemprop="name" content="Kanna's Zone">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/01/t1/" class="post-title-link" itemprop="url">电子管原理及束射四极管KT88结构研究</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          电子管原理及束射四极管KT88结构研究
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -203,7 +241,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>转载自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/145261497">https://zhuanlan.zhihu.com/p/145261497</a></p>
+        <p>转载自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/145261497">https://zhuanlan.zhihu.com/p/145261497</a></p>
 <h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p>电子管曾为人类开启了电子时代。跟半导体器件相比，它透明的外壳、肉眼可观的尺寸，为我们普通爱好者探索它的秘密提供了方便。本文以一款型号为KT88的束射四极管为例，记述一些研究结论。</p>
 <h2 id="二、电子管功放"><a href="#二、电子管功放" class="headerlink" title="二、电子管功放"></a>二、电子管功放</h2><p>本人一台电子管功放，用来推动一对德国产老音箱EL80，中低音醇厚绵延，高音得益于EL80天蚕丝振膜的轻巧，甜脆灵动，丝般柔滑。夜深人静时分，音乐缓缓流淌，橙黄色灯光清幽温润，渐渐的，思绪被沉浸了。</p>
 <p><img src="https://pic4.zhimg.com/80/v2-2144a11abeb3013dcd7e3bdee923e023_720w.jpg" alt="img">图1</p>
@@ -352,87 +390,35 @@
 <p><img src="https://pic1.zhimg.com/80/v2-4571203675af6b63a7e7d0a97e40e154_720w.jpg" alt="img"></p>
 <h2 id="十、小结"><a href="#十、小结" class="headerlink" title="十、小结"></a>十、小结</h2><p>本文以KT88束射四极管为例，介绍了一些电子管的结构及工作原理。本来要穿插一些纯理论的东西，但打公式太过复杂，留待以后另文再述。由于本人水平有限，所述有误之处，敬请指正。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E6%99%B6%E4%BD%93%E7%AE%A1/" rel="tag"># 晶体管</a>
+              <a href="/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93/" rel="tag"># 半导体</a>
+              <a href="/tags/%E7%94%B5%E5%AD%90%E7%AE%A1/" rel="tag"># 电子管</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/01/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kanna.jpg">
-      <meta itemprop="name" content="Kanna">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kanna's Zone">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/01/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-01 12:27:03" itemprop="dateCreated datePublished" datetime="2021-01-01T12:27:03+08:00">2021-01-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/01/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -485,6 +471,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">一、引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%94%B5%E5%AD%90%E7%AE%A1%E5%8A%9F%E6%94%BE"><span class="nav-number">2.</span> <span class="nav-text">二、电子管功放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81KT88%E7%94%B5%E5%AD%90%E7%AE%A1"><span class="nav-number">3.</span> <span class="nav-text">三、KT88电子管</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%94%B5%E5%AD%90%E7%AE%A1%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">四、电子管基本工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%9D%9F%E5%B0%84%E5%9B%9B%E6%9E%81%E7%AE%A1%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">五、束射四极管工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81KT88%E7%BB%93%E6%9E%84%EF%BC%884%E6%A5%BC%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">六、KT88结构（4楼）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81KT88%E7%BB%93%E6%9E%84%EF%BC%883%E6%A5%BC%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">七、KT88结构（3楼）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81KT88%E7%BB%93%E6%9E%84%EF%BC%882%E6%A5%BC%EF%BC%89"><span class="nav-number">8.</span> <span class="nav-text">八、KT88结构（2楼）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E3%80%81KT88%E7%BB%93%E6%9E%84%EF%BC%885%E6%A5%BC%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">九、KT88结构（5楼）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E5%B0%8F%E7%BB%93"><span class="nav-number">10.</span> <span class="nav-text">十、小结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
